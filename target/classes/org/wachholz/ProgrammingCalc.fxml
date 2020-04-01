@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="523.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.wachholz.ProgrammingCalc">
+   <top>
+      <VBox prefHeight="379.0" prefWidth="566.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <TextArea fx:id="calculationBox1" editable="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="8.0" prefWidth="600.0" text="First Calculation box" wrapText="true" />
+            <TextArea fx:id="calculationBox2" editable="false" layoutX="10.0" layoutY="35.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="25.0" prefWidth="600.0" text="Second Calculation box" wrapText="true" />
+            <HBox prefHeight="22.0" prefWidth="600.0">
+               <children>
+                  <ToggleButton fx:id="hexToggleButton" mnemonicParsing="false" onAction="#hexToggleButtonPressed" text="Hex" />
+                  <Text fx:id="hexText" strokeType="OUTSIDE" strokeWidth="0.0" text="Hex Value" />
+               </children>
+            </HBox>
+            <HBox prefHeight="22.0" prefWidth="600.0">
+               <children>
+                  <ToggleButton fx:id="decimalToggleButton" mnemonicParsing="false" onAction="#decimalToggleButtonPressed" selected="true" text="Dec" />
+                  <Text fx:id="decimalText" strokeType="OUTSIDE" strokeWidth="0.0" text="Dec Value" />
+               </children>
+            </HBox>
+            <HBox prefHeight="22.0" prefWidth="600.0">
+               <children>
+                  <ToggleButton fx:id="octalToggleButton" mnemonicParsing="false" onAction="#octalToggleButtonPressed" text="Oct" />
+                  <Text fx:id="octalText" strokeType="OUTSIDE" strokeWidth="0.0" text="Oct Value" />
+               </children>
+            </HBox>
+            <HBox prefHeight="22.0" prefWidth="600.0">
+               <children>
+                  <ToggleButton fx:id="binaryToggleButton" mnemonicParsing="false" onAction="#binaryToggleButtonPressed" prefHeight="25.0" prefWidth="35.0" text="Bin" />
+                  <Text fx:id="binaryText" strokeType="OUTSIDE" strokeWidth="0.0" text="Bin Value" />
+               </children>
+            </HBox>
+            <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="579.0">
+               <children>
+                  <Button maxWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="ICON" HBox.hgrow="ALWAYS" />
+                  <Button layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="ICON" />
+                  <Button layoutX="75.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="WORD" />
+                  <Button layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="MS" />
+                  <Button layoutX="75.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="M*" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="212.0" prefHeight="1.0" prefWidth="600.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Lsh" HBox.hgrow="ALWAYS" />
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Rsh" />
+                  <Button layoutX="75.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Or" />
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Xor" />
+                  <Button layoutX="75.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Not" />
+                  <Button layoutX="271.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="And" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="237.0" prefHeight="1.0" prefWidth="600.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Up" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="buttonMod" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonModPressed" prefHeight="25.0" prefWidth="65.0" text="Mod" />
+                  <Button fx:id="buttonClearE" layoutX="75.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonClearEPressed" prefHeight="25.0" prefWidth="65.0" text="CE" />
+                  <Button fx:id="buttonClear" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonClearPressed" prefHeight="25.0" prefWidth="65.0" text="C" />
+                  <Button fx:id="buttonBack" layoutX="75.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonBackPressed" prefHeight="25.0" prefWidth="65.0" text="ICON" />
+                  <Button fx:id="buttonDivide" layoutX="271.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonDividePressed" prefHeight="25.0" prefWidth="65.0" text="/" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="263.0" prefHeight="1.0" prefWidth="600.0">
+               <children>
+                  <Button fx:id="buttonA" disable="true" mnemonicParsing="false" onAction="#buttonAPressed" prefHeight="25.0" prefWidth="65.0" text="A" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="buttonB" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonBPressed" prefHeight="25.0" prefWidth="65.0" text="B" />
+                  <Button fx:id="buttonNum7" layoutX="75.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonNum7Pressed" prefHeight="25.0" prefWidth="65.0" text="7" />
+                  <Button fx:id="buttonNum8" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonNum8Pressed" prefHeight="25.0" prefWidth="65.0" text="8" />
+                  <Button fx:id="buttonNum9" layoutX="75.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonNum9Pressed" prefHeight="25.0" prefWidth="65.0" text="9" />
+                  <Button fx:id="buttonMultiply" layoutX="271.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonMultiplyPressed" prefHeight="25.0" prefWidth="65.0" text="X" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="288.0" prefHeight="1.0" prefWidth="600.0">
+               <children>
+                  <Button fx:id="buttonC" disable="true" mnemonicParsing="false" onAction="#buttonCPressed" prefHeight="25.0" prefWidth="65.0" text="C" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="buttonD" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonDPressed" prefHeight="25.0" prefWidth="65.0" text="D" />
+                  <Button fx:id="buttonNum4" layoutX="75.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonNum4Pressed" prefHeight="25.0" prefWidth="65.0" text="4" />
+                  <Button fx:id="buttonNum5" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonNum5Pressed" prefHeight="25.0" prefWidth="65.0" text="5" />
+                  <Button fx:id="buttonNum6" layoutX="75.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonNum6Pressed" prefHeight="25.0" prefWidth="65.0" text="6" />
+                  <Button fx:id="buttonSubtract" layoutX="271.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonSubtractPressed" prefHeight="25.0" prefWidth="65.0" text="-" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="313.0" prefHeight="1.0" prefWidth="600.0">
+               <children>
+                  <Button fx:id="buttonE" disable="true" mnemonicParsing="false" onAction="#buttonEPressed" prefHeight="25.0" prefWidth="65.0" text="E" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="buttonF" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonFPressed" prefHeight="25.0" prefWidth="65.0" text="F" />
+                  <Button fx:id="buttonNum1" layoutX="75.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonNum1Pressed" prefHeight="25.0" prefWidth="65.0" text="1" />
+                  <Button fx:id="buttonNum2" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonNum2Pressed" prefHeight="25.0" prefWidth="65.0" text="2" />
+                  <Button fx:id="buttonNum3" layoutX="75.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonNum3Pressed" prefHeight="25.0" prefWidth="65.0" text="3" />
+                  <Button fx:id="buttonAdd" layoutX="271.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonAddPressed" prefHeight="25.0" prefWidth="65.0" text="+" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="339.0" prefHeight="1.0" prefWidth="600.0">
+               <children>
+                  <Button fx:id="buttonOpenParenthesis" mnemonicParsing="false" onAction="#buttonOpenParenthesisPressed" prefHeight="25.0" prefWidth="65.0" text="(" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="buttonCloseParenthesis" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonCloseParenthesisPressed" prefHeight="25.0" prefWidth="65.0" text=")" />
+                  <Button fx:id="buttonChangeSign" layoutX="75.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonChangeSignPressed" prefHeight="25.0" prefWidth="65.0" text="+/-" />
+                  <Button fx:id="buttonNum0" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonNum0Pressed" prefHeight="25.0" prefWidth="65.0" text="0" />
+                  <Button fx:id="buttonDecimal" disable="true" layoutX="75.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonDecimalPressed" prefHeight="25.0" prefWidth="65.0" text="." />
+                  <Button fx:id="buttonEquals" layoutX="271.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonEqualsPressed" prefHeight="25.0" prefWidth="65.0" text="=" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>
