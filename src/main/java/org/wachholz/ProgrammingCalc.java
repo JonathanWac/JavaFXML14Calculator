@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.ToggleButton;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 
 public class ProgrammingCalc {
@@ -229,5 +230,12 @@ public class ProgrammingCalc {
         buttonNum7.setDisable(true);
         buttonNum8.setDisable(true);
         buttonNum9.setDisable(true);
+    }
+
+    public void calculationBox1Pressed(MouseEvent mouseEvent) {
+    }
+
+    public void calculationBox2Pressed(MouseEvent mouseEvent) {
+
     }
 }
