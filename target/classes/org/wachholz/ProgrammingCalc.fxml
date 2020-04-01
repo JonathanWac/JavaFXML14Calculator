@@ -11,9 +11,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="523.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.wachholz.ProgrammingCalc">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="394.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.wachholz.ProgrammingCalc">
    <top>
-      <VBox prefHeight="379.0" prefWidth="566.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="380.0" prefWidth="392.0" BorderPane.alignment="CENTER">
          <children>
             <MenuBar>
               <menus>
@@ -34,8 +34,8 @@
                 </Menu>
               </menus>
             </MenuBar>
-            <TextArea fx:id="calculationBox1" editable="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="8.0" prefWidth="600.0" text="First Calculation box" wrapText="true" />
-            <TextArea fx:id="calculationBox2" editable="false" layoutX="10.0" layoutY="35.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="25.0" prefWidth="600.0" text="Second Calculation box" wrapText="true" />
+            <TextArea fx:id="calculationBox1" editable="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="37.0" prefWidth="389.0" text="First Calculation box" wrapText="true" />
+            <TextArea fx:id="calculationBox2" editable="false" layoutX="10.0" layoutY="35.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="38.0" prefWidth="313.0" text="Second Calculation box" wrapText="true" />
             <HBox prefHeight="22.0" prefWidth="600.0">
                <children>
                   <ToggleButton fx:id="hexToggleButton" mnemonicParsing="false" onAction="#hexToggleButtonPressed" text="Hex" />
