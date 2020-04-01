@@ -17,7 +17,8 @@ public class ProgrammingCalc {
     public Button buttonMod, buttonClearE, buttonClear, buttonBack,
             buttonDivide, buttonMultiply, buttonSubtract, buttonAdd,
             buttonOpenParenthesis, buttonCloseParenthesis, buttonChangeSign, buttonDecimal, buttonEquals;
-    public String calculationString, displayCalculationString1, displayCalculationString2, calculationMode;
+    public String displayCalculationString1, displayCalculationString2, calculationMode;
+    public StringBuilder calculationString = new StringBuilder();
 
 
     public void buttonAPressed(ActionEvent actionEvent) {
@@ -50,22 +51,32 @@ public class ProgrammingCalc {
 
     public void buttonNum1Pressed(ActionEvent actionEvent) {
         System.out.println("Button 1 pressed");
+        calculationString.append("1");
+        calculationBox1.setText(calculationString.toString());
     }
 
     public void buttonNum2Pressed(ActionEvent actionEvent) {
         System.out.println("Button 2 pressed");
+        calculationString.append("2");
+        calculationBox1.setText(calculationString.toString());
     }
 
     public void buttonNum3Pressed(ActionEvent actionEvent) {
         System.out.println("Button 3 pressed");
+        calculationString.append("3");
+        calculationBox1.setText(calculationString.toString());
     }
 
     public void buttonNum4Pressed(ActionEvent actionEvent) {
         System.out.println("Button 4 pressed");
+        calculationString.append("4");
+        calculationBox1.setText(calculationString.toString());
     }
 
     public void buttonNum5Pressed(ActionEvent actionEvent) {
         System.out.println("Button 5 pressed");
+        calculationString.append("5");
+        calculationBox1.setText(calculationString.toString());
     }
 
     public void buttonNum6Pressed(ActionEvent actionEvent) {
