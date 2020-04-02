@@ -7,10 +7,11 @@ import javafx.scene.control.ToggleButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 
+
 public class ProgrammingCalc {
     public TextArea calculationBox1, calculationBox2;
     public ToggleButton hexToggleButton, decimalToggleButton, octalToggleButton, binaryToggleButton;
-    public Text hexText, decimalText, octalText, binaryText;
+    public Text hexText, decimalText, octalText, binaryText, calculationText1;
     public Button buttonA, buttonB, buttonC, buttonD, buttonE, buttonF,
             buttonNum0, buttonNum1, buttonNum2, buttonNum3, buttonNum4, buttonNum5,
             buttonNum6, buttonNum7, buttonNum8, buttonNum9;
@@ -19,6 +20,8 @@ public class ProgrammingCalc {
             buttonOpenParenthesis, buttonCloseParenthesis, buttonChangeSign, buttonDecimal, buttonEquals;
     public String displayCalculationString1, displayCalculationString2, calculationMode;
     public StringBuilder calculationString = new StringBuilder();
+
+
 
 
     public void buttonAPressed(ActionEvent actionEvent) {
@@ -81,22 +84,35 @@ public class ProgrammingCalc {
 
     public void buttonNum6Pressed(ActionEvent actionEvent) {
         System.out.println("Button 6 pressed");
+        calculationString.append("6");
+        calculationBox1.setText(calculationString.toString());
     }
 
     public void buttonNum7Pressed(ActionEvent actionEvent) {
         System.out.println("Button 7 pressed");
+        calculationString.append("7");
+        calculationBox1.setText(calculationString.toString());
     }
 
     public void buttonNum8Pressed(ActionEvent actionEvent) {
         System.out.println("Button 8 pressed");
+        calculationString.append("8");
+        calculationBox1.clear();
+        calculationBox1.setText(calculationString.toString());
     }
 
     public void buttonNum9Pressed(ActionEvent actionEvent) {
         System.out.println("Button 9 pressed");
+        calculationString.append("9");
+        hexText.setText(calculationString.toString());
     }
 
     public void buttonDividePressed(ActionEvent actionEvent) {
         System.out.println("Button / pressed");
+        calculationString.append(" / ");
+        calculationBox1.clear();
+        calculationText1.setText(calculationString.toString());
+        calculationBox1.setText(calculationString.toString());
     }
 
     public void buttonMultiplyPressed(ActionEvent actionEvent) {
